@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+
+{% block contenido %}
+
+<br> <br>
+<div class="card">
+    <div class="card-body">
+            <h2>Nuevo producto</h2>
+            <hr>
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form }}
+
+                    <div class="d-flex justify-content-center">
+                        <input type="reset" value="Cancelar" class="btn btn-secondary">
+                        <input type="submit" value="Guardar" class="btn btn-primary">
+                    </div>
+                    
+                </form>
+                
+                {{mensaje}}
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}
